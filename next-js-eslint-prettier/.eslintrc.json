@@ -1,0 +1,20 @@
+{
+  "plugins": [
+    "react",
+    "simple-import-sort",
+    "import",
+    "react-hooks"
+  ],
+  "extends": [
+    "next/core-web-vitals",
+    "prettier"
+  ],
+  "rules": {
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
+    "react-hooks/exhaustive-deps": "error"
+  }
+}
