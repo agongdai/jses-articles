@@ -1,4 +1,3 @@
-'use client';
 import Image from 'next/image'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { BLOCKS, MARKS } from '@contentful/rich-text-types'
@@ -56,7 +55,6 @@ function RichTextAsset({
 }
 
 export function Markdown({ content }: { content: Content }) {
-  console.log('content', content);
   const entries = content?.links?.entries?.block;
   return documentToReactComponents(content.json, {
     renderNode: {
