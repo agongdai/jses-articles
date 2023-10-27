@@ -24,6 +24,19 @@ const POST_GRAPHQL_FIELDS = `
           description
         }
       }
+      entries {
+        block {
+          sys {
+            id
+          }
+          __typename
+          ... on Snippet {
+            title
+            language
+            snippet
+          }
+        }
+      }
     }
   }
 `
