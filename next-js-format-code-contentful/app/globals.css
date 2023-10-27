@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.jses-inline-code:before,
+.jses-inline-code:after {
+  content: '';
+}
+
+.jses-inline-code {
+  @apply text-sm font-normal p-1 rounded bg-purple-200 font-mono;
+}

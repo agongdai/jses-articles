@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
-import { BLOCKS } from '@contentful/rich-text-types'
+import { BLOCKS, MARKS } from '@contentful/rich-text-types'
 
 interface Asset {
   sys: {
@@ -46,6 +46,9 @@ export function Markdown({ content }: { content: Content }) {
           assets={content.links.assets.block}
         />
       ),
+    },
+    renderMark: {
+      [MARKS.CODE]: (text) => <code className='jses-inline-code'>{text}</code>,
     },
   })
 }
